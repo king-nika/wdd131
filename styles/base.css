@@ -43,6 +43,7 @@ main {
   grid-template-columns: 4fr 2fr;
   padding: 1rem;
   gap: 12px;
+  max-width: 2000px;
 }
 main .card {
   border: 1px solid #ffffff;
