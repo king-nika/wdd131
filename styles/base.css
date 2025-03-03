@@ -1,0 +1,105 @@
+:root {
+  --background1: #2c2f33;
+  --background2: #374151;
+  --primary: #e0e0e0;
+  --accent1: #00b4d8;
+  --accent2: #008cba;
+  --poppins: "Poppins", serif;
+  --inter: "Inter", serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #181818;
+  color: var(--primary);
+  font-family: var(--inter);
+}
+h1,
+h2,
+h3 {
+  font-family: var(--poppins);
+}
+header h1 {
+  text-align: center;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--background1);
+  padding: 1rem 0;
+}
+a {
+  text-decoration: none;
+  color: var(--primary);
+}
+a:hover {
+  text-decoration: underline;
+}
+main {
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  padding: 1rem;
+  gap: 12px;
+}
+main .card {
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+main .card h2 {
+  text-align: center;
+  background-color: var(--background2);
+  margin: 0;
+  padding: 0.5rem 0;
+}
+main .card div {
+  padding: 1rem;
+}
+main .card h3 {
+  width: 70%;
+  margin: 1rem auto;
+  text-align: center;
+  border-bottom: 1px solid var(--primary);
+}
+main .card ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: calc(100% - 3rem);
+  gap: 0.5rem;
+  margin: 0;
+}
+main a {
+  text-decoration: underline;
+}
+main .profile img {
+  width: 200px;
+  height: auto;
+  float: right;
+  margin-left: 15px;
+}
+main .country figure {
+  float: left;
+  margin: 0 0.5rem 0.5rem;
+}
+main .country figcaption {
+  text-align: center;
+  font-style: italic;
+}
+main .country img {
+  width: 300px;
+  height: auto;
+}
+footer {
+  text-align: center;
+  line-height: 15px;
+  background-color: var(--background1);
+  padding: 0.8rem 0;
+  margin-top: 0.5rem;
+}
+footer #lastModified {
+  font-weight: bold;
+}
