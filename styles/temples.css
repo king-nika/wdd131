@@ -64,8 +64,9 @@ header nav ul.open {
 main {
   max-width: 800px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
-main h1 {
+main h2 {
   text-align: center;
 }
 main section {
