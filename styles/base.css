@@ -8,6 +8,9 @@
   --inter: "Inter", serif;
 }
 
+html {
+  font-family: 1.2vw;
+}
 body {
   margin: 0;
   padding: 0;
