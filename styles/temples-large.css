@@ -1,0 +1,9 @@
+@media only screen and (min-width: 512px) {
+  header nav ul {
+    display: flex;
+    flex-direction: row;
+  }
+  #menu {
+    display: none;
+  }
+}
