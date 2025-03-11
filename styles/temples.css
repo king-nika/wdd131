@@ -9,7 +9,7 @@
   box-sizing: border-box;
 }
 html {
-  font-size: 1.2vw;
+  font-size: clamp(14px, 1.2vw, 18px);
 }
 body {
   background-color: var(--bg-color);
@@ -24,7 +24,7 @@ header {
   position: relative;
 }
 header h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 header a {
   display: block;
@@ -32,7 +32,7 @@ header a {
   color: var(--text-color);
   padding: 8px;
   transition: background-color ease 0.3s, color ease 0.3s;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
 }
 header a:hover {
   background-color: var(--text-color);
@@ -47,7 +47,7 @@ header nav ul.open {
   list-style-type: none;
   position: absolute;
   right: 0;
-  top: 30px;
+  top: 53px;
   background-color: var(--bg-color);
   width: 100%;
   text-align: right;
@@ -58,7 +58,9 @@ header nav ul.open {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
+  width: 50px;
+  height: 50px;
 }
 #menu::before {
   content: "☰";
@@ -73,7 +75,7 @@ main {
 }
 main h2 {
   text-align: center;
-  font-size: 15px;
+  font-size: 1.8rem;
 }
 main section {
   margin: 1rem 0;
@@ -93,12 +95,11 @@ main figure img {
 main figcaption {
   font-style: italic;
   text-align: center;
-  font-size: 3rem;
+  font-size: 1.2rem;
   margin-top: 0.5rem;
 }
 footer {
   text-align: center;
   margin: 1rem 0;
-  font-size: 2.5rem;
-  line-height: 20px;
+  font-size: 1.2rem;
 }
