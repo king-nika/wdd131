@@ -54,6 +54,7 @@ header {
 }
 .card ul {
   list-style-type: none;
+  line-height: 2;
 }
 footer {
   text-align: center;
