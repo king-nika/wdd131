@@ -10,16 +10,21 @@ lastModified.innerText = modified;
 const temperature = 32;
 const windSpeed = 10;
 
-const calculateWindChill = () => {
+const calculateWindChill = (temp, wind) => {
+  if (wind > 10 || temp < 4.8) {
+    return "N/A";
+  }
+
   const windChill =
     13.12 +
-    0.6215 * temperature -
-    11.37 * Math.pow(windSpeed, 0.16) +
-    0.3965 * temperature * Math.pow(windSpeed, 0.16);
+    0.6215 * temp -
+    11.37 * Math.pow(wind, 0.16) +
+    0.3965 * temp * Math.pow(wind, 0.16);
 
-  document.getElementById("wind-chill").textContent += ` ${Math.round(
-    windChill
-  )}°C`;
+  return Math.round(windChill) + "°C";
 };
 
-calculateWindChill();
+document.getElementById("wind-chill").textContent += ` ${calculateWindChill(
+  temperature,
+  windSpeed
+)}`;
