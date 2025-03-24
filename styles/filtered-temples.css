@@ -91,6 +91,8 @@ main figure {
 main figure img {
   width: 100%;
   height: auto;
+  display: block;
+  aspect-ratio: 8 / 5;
 }
 main h3 {
   font-style: italic;

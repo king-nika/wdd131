@@ -98,7 +98,7 @@ const newLink = document.getElementById("new");
 const largeLink = document.getElementById("large");
 const smallLink = document.getElementById("small");
 
-const displayTemples = (temple) => {
+const displayTemples = (temple, index) => {
   const figure = document.createElement("figure");
   const h3 = document.createElement("h3");
   const location = document.createElement("p");
@@ -114,9 +114,11 @@ const displayTemples = (temple) => {
   size.style.marginBottom = "0.5rem";
   img.setAttribute("src", temple.imageUrl);
   img.setAttribute("alt", temple.templeName);
-  img.setAttribute("loading", "lazy");
   img.setAttribute("width", "275");
   img.setAttribute("height", "183");
+  if (index !== 0) {
+    img.setAttribute("loading", "lazy");
+  }
 
   figure.appendChild(h3);
   figure.appendChild(location);
