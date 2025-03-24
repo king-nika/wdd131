@@ -100,10 +100,9 @@ main h3 {
 main figure p {
   text-align: center;
   font-weight: 500;
-
-  span {
-    font-weight: 400;
-  }
+}
+main figure span {
+  font-weight: 400;
 }
 footer {
   text-align: center;
