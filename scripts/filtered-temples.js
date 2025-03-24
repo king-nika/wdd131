@@ -99,15 +99,32 @@ const largeLink = document.getElementById("large");
 const smallLink = document.getElementById("small");
 
 const displayTemples = (temple) => {
-  templeSection.innerHTML += `
-    <figure>
-        <h3>${temple.templeName}</h3>
-        <p style="margin-top: 1rem">Location: <span>${temple.location}</span></p>
-        <p>Dedicated: <span>${temple.dedicated}</span></p>
-        <p style="margin-bottom: 0.5rem">Size: <span>${temple.area}sq ft</span></p>
-        <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy" width="400" height="250" />
-    </figure>
-    `;
+  const figure = document.createElement("figure");
+  const h3 = document.createElement("h3");
+  const location = document.createElement("p");
+  const dedicated = document.createElement("p");
+  const size = document.createElement("p");
+  const img = document.createElement("img");
+
+  h3.textContent = temple.templeName;
+  location.innerHTML = `Location: <span>${temple.location}</span>`;
+  location.style.marginTop = "1rem";
+  dedicated.innerHTML = `Dedicated: <span>${temple.dedicated}</span>`;
+  size.innerHTML = `Size: <span>${temple.area} sq ft</span>`;
+  size.style.marginBottom = "0.5rem";
+  img.setAttribute("src", temple.imageUrl);
+  img.setAttribute("alt", temple.templeName);
+  img.setAttribute("loading", "lazy");
+  img.setAttribute("width", "275");
+  img.setAttribute("height", "183");
+
+  figure.appendChild(h3);
+  figure.appendChild(location);
+  figure.appendChild(dedicated);
+  figure.appendChild(size);
+  figure.appendChild(img);
+
+  templeSection.appendChild(figure);
 };
 
 temples.map(displayTemples);
