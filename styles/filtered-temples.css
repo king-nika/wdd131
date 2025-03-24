@@ -1,0 +1,138 @@
+:root {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --border-color: #292929;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: clamp(14px, 1.2vw, 18px);
+}
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Poppins", sans-serif;
+}
+header {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+header h1 {
+  font-size: 2rem;
+}
+header a {
+  display: block;
+  text-decoration: none;
+  color: var(--text-color);
+  padding: 8px;
+  transition: background-color ease 0.3s, color ease 0.3s;
+  font-size: 1.8rem;
+}
+header a:hover {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}
+header nav ul {
+  display: none;
+  list-style-type: none;
+}
+header nav ul.open {
+  display: block;
+  list-style-type: none;
+  position: absolute;
+  right: 0;
+  top: 53px;
+  background-color: var(--bg-color);
+  width: 100%;
+  text-align: right;
+}
+#menu {
+  font-size: 1.4rem;
+  color: #e0e0e0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 2.5rem;
+  width: 50px;
+  height: 50px;
+}
+#menu::before {
+  content: "☰";
+}
+#menu.open::before {
+  content: "✕";
+}
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+main h2 {
+  text-align: center;
+  font-size: 1.8rem;
+}
+main section {
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+}
+main figure {
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+main figure img {
+  width: 100%;
+  height: auto;
+}
+main h3 {
+  font-style: italic;
+  text-align: center;
+  font-size: 2rem;
+}
+main figure p {
+  text-align: center;
+  font-weight: 500;
+
+  span {
+    font-weight: 400;
+  }
+}
+footer {
+  text-align: center;
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+
+@media only screen and (min-width: 512px) {
+  header nav ul {
+    display: flex;
+    flex-direction: row;
+  }
+  header a {
+    font-size: 1.2rem;
+  }
+  header h1 {
+    font-size: 1.5rem;
+  }
+  main h2 {
+    font-size: 1.5rem;
+  }
+  main h3 {
+    font-size: 1.4rem;
+  }
+  #menu {
+    display: none;
+  }
+  footer {
+    font-size: 1.2rem;
+    line-height: normal;
+  }
+}
