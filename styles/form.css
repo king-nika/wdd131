@@ -1,0 +1,96 @@
+:root {
+  --background: #f7f8fa;
+  --text: #333333;
+  --headings: #222222;
+  --accent: #008080;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+}
+h1 {
+  color: #ffffff;
+  text-align: center;
+}
+header {
+  background-color: var(--accent);
+  padding: 2rem 0;
+}
+main {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+main > p {
+  text-align: center;
+}
+form {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+form label {
+  display: block;
+}
+form span,
+form p {
+  font-weight: 600;
+  color: var(--headings);
+}
+form span.optional::after {
+  content: " (Optional)";
+  color: var(--accent);
+  font-weight: 500;
+  font-size: 0.7rem;
+}
+form input,
+form select {
+  padding: 0.8rem 0.5rem;
+  border: 1px solid #ddd;
+}
+form select {
+  appearance: none;
+}
+form input[type="text"],
+form input[type="date"],
+form input[type="submit"],
+form textarea,
+form select {
+  display: block;
+  color: var(--text);
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+}
+form input[type="checkbox"],
+form input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  background-color: var(--accent);
+  vertical-align: middle;
+  margin: 0.2rem 0;
+}
+form div {
+  margin-bottom: 1rem;
+}
+form input[type="submit"] {
+  border: none;
+  color: #ffffff;
+  background-color: var(--accent);
+  width: 100%;
+  max-width: 400px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+footer {
+  text-align: center;
+  padding: 1rem 0;
+}

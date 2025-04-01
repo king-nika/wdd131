@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Akingbayi Ojo" />
+    <meta
+      name="description"
+      content="Review your form details before submission. Ensure all information is correct and make necessary changes before finalizing."
+    />
+    <title>Product Review Form</title>
+
+    <link rel="stylesheet" href="styles/form.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Product Review</h1>
+    </header>
+
+    <main>
+      <form action="review.html" method="get">
+        <div>
+          <label>
+            <span>Product Name</span>
+            <select name="productName" id="productName" required>
+              <option value="" disabled selected>Select a product...</option>
+            </select>
+          </label>
+        </div>
+
+        <div>
+          <p>Overall Rating</p>
+          <label>
+            <input value="1" type="radio" id="rating" name="rating" />
+            <span>&star;</span>
+          </label>
+          <label>
+            <input value="2" type="radio" id="rating" name="rating" />
+            <span>&star;&star;</span>
+          </label>
+          <label>
+            <input value="3" type="radio" id="rating" name="rating" />
+            <span>&star;&star;&star;</span>
+          </label>
+          <label>
+            <input value="4" type="radio" id="rating" name="rating" />
+            <span>&star;&star;&star;&star;</span>
+          </label>
+          <label>
+            <input value="5" type="radio" id="rating" name="rating" />
+            <span>&star;&star;&star;&star;&star;</span>
+          </label>
+        </div>
+
+        <div>
+          <label>
+            <span>Date of Installation</span>
+            <input type="date" name="date" id="date" required />
+          </label>
+        </div>
+
+        <div>
+          <p>
+            Which features did you find useful in this product? <br />
+            (Check all that apply)
+          </p>
+          <label>
+            <input type="checkbox" name="durability" id="durability" />
+            <span>Durability</span>
+          </label>
+          <label>
+            <input type="checkbox" name="easyUse" id="easyUse" />
+            <span>Ease of use</span>
+          </label>
+          <label>
+            <input type="checkbox" name="performance" id="performance" />
+            <span>Performance</span>
+          </label>
+          <label>
+            <input type="checkbox" name="design" id="design" />
+            <span>Design</span>
+          </label>
+        </div>
+
+        <div>
+          <label>
+            <span class="optional">Written Review sub</span>
+            <textarea name="review" id="review"></textarea>
+          </label>
+        </div>
+
+        <div>
+          <label>
+            <span class="optional">Your Name</span>
+            <input type="text" name="username" id="username" />
+          </label>
+        </div>
+
+        <input type="submit" value="Post Review" />
+      </form>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="currentYear"></span> 🌐 Akingbayi Ojo 🌐 Nigeria</p>
+      <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+
+    <script src="scripts/form.js" defer></script>
+  </body>
+</html>
