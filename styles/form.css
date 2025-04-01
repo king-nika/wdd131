@@ -44,6 +44,9 @@ form p {
   font-weight: 600;
   color: var(--headings);
 }
+form p {
+  min-height: 40px;
+}
 form span.optional::after {
   content: " (Optional)";
   color: var(--accent);
