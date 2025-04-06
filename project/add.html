@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Akingbayi Ojo">
+    <meta name="description" content="Add a new transaction to your budget planner">
+    <title>Add Transaction | BudgetWise</title>
+
+    <link rel="stylesheet" href="styles/signup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Lato:wght@400;700;900&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>BudgetWise</h1>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Add Transaction</h1>
+
+        <form action="dashboard.html" method="post">
+            <label>
+                <span>Date</span>
+                <input type="date" name="date" id="date" required>
+            </label>
+
+            <label>
+                <span>Income/Expense</span>
+                <select name="incomeExpense" id="incomeExpense" required>
+                    <option value="" disabled selected>Select Income/Expense</option>
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+            </label>
+
+            <label>
+                <span>Description</span>
+                <input type="text" name="description" id="description" required>
+            </label>
+
+            <label>
+                <span>Amount</span>
+                <input type="number" name="amount" id="amount" required>
+            </label>
+
+            <input type="submit" value="Add Transaction">
+        </form>
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> 🌐 Akingbayi Ojo 🌐 Nigeria</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+
+    <script src="scripts/add.js" defer></script>
+</body>
+</html>

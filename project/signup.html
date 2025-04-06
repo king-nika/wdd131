@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Akingbayi Ojo">
+    <meta name="description" content="Sign up for BudgetWise">
+    <title>Sign Up | BudgetWise</title>
+
+    <link rel="stylesheet" href="styles/signup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Lato:wght@400;700;900&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>BudgetWise</h1>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+
+            <button class="menu"></button>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Sign Up</h1>
+
+        <p class="error"></p>
+        <form method="post" action="dashboard.html">
+            <label>
+                <span>Fullname:</span>
+                <input type="text" name="fullname" id="fullname" placeholder="John Doe" required>
+            </label>
+
+            <label>
+                <span>Email:</span>
+                <input type="email" name="email" id="email" placeholder="john.doe@example.com" required>
+            </label>
+
+            <label>
+                <span>Password:</span>
+                <input type="password" name="password" id="password" placeholder="********" required>
+            </label>
+
+            <input type="submit" value="Sign Up">
+
+            <p>Already have an account? <a href="login.html">Log In</a></p>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> 🌐 Akingbayi Ojo 🌐 Nigeria</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+
+    <script src="scripts/signup.js" defer></script>
+</body>
+</html>
