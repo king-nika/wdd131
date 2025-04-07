@@ -22,16 +22,20 @@
 
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="add.html">Add Transaction</a></li>
                 <li><a href="#" id="logout">Log Out</a></li>
             </ul>
 
-            <button class="menu"></button>
+            <button class="menu" aria-label="Menu"></button>
         </nav>
     </header>
 
     <main>
         <h1>Welcome, <span id="username"></span></h1>
+
+        <div class="controls">
+            <a href="add.html">Add Transaction</a>
+            <button id="clearAll">Clear All</button>
+        </div>
 
         <section>
             <div class="table-container">

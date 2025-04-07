@@ -16,7 +16,7 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  scroll-margin-top: 4rem;
+  scroll-margin-top: 5rem;
 }
 html {
   font-size: clamp(14px, 1.2vw, 18px);
@@ -68,6 +68,7 @@ a {
 }
 header a.signUp {
   background-color: var(--primary-accent);
+  color: var(--bg);
   padding: 10px 20px;
   border-radius: 8px;
 }
@@ -79,6 +80,7 @@ header a.login {
 }
 header a.login:hover {
   background-color: var(--primary-accent);
+  color: var(--bg);
 }
 main {
   max-width: 1120px;
@@ -109,6 +111,7 @@ main > h1 {
 }
 .hero div:first-child a {
   background-color: var(--primary-accent);
+  color: var(--bg);
   padding: 10px 20px;
   border-radius: 8px;
   text-align: center;
@@ -216,6 +219,7 @@ main > h1 {
   cursor: pointer;
   transition: background-color 0.2s ease;
   outline: none;
+  color: var(--bg);
 }
 .start form input[type="submit"]:hover {
   background-color: var(--success);
@@ -226,48 +230,6 @@ footer {
   text-align: center;
   font-size: 1.2rem;
   line-height: 2;
-}
-
-/* Table Styles */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1rem 0;
-  background-color: var(--bg);
-  border: 1px solid var(--neutral);
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-th,
-td {
-  padding: 1rem;
-  text-align: left;
-  border-bottom: 1px solid var(--neutral);
-}
-
-th {
-  background-color: var(--primary-accent);
-  color: var(--bg);
-  font-weight: bold;
-}
-
-tr:hover {
-  background-color: rgba(255, 255, 255, 0.05);
-}
-
-/* Responsive Table */
-@media only screen and (max-width: 32rem) {
-  table {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-
-  th,
-  td {
-    min-width: 120px;
-  }
 }
 
 @media only screen and (min-width: 32rem) {

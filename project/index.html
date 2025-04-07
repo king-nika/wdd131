@@ -7,12 +7,29 @@
     <meta name="description" content="BudgetWise - A personal finance management tool">
     <title>BudgetWise</title>
 
-    <link rel="stylesheet" href="styles/styles.css">
+    <style>
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: var(--inter);
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: var(--lato);
+        }
+    </style>
+    <link rel="stylesheet" href="styles/styles.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="styles/styles.css">
+    </noscript>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Lato:wght@400;700;900&display=swap"
         rel="stylesheet">
+    <link rel="preload" as="image" href="images/hero.webp">
 </head>
 <body>
     <header>
@@ -26,11 +43,11 @@
                 <li><a href="#benefits">Benefits</a></li>
                 <li><a href="#start">Get Started</a></li>
                 <li><a href="signup.html" class="signUp">Sign Up</a></li>
-                <li><a href="#" class="login">Log In</a></li>
+                <li><a href="login.html" class="login">Log In</a></li>
             </ul>
         </nav>
 
-        <button class="menu"></button>
+        <button class="menu" aria-label="Menu"></button>
     </header>
 
     <main>
@@ -47,7 +64,7 @@
             </div>
 
             <div class="img">
-                <img src="images/hero.webp" alt="Hero Image">
+                <img src="images/hero.webp" alt="Hero Image" fetchpriority="high" width="612" height="323">
             </div>
         </section>
 
@@ -67,7 +84,7 @@
             </div>
 
             <div>
-                <img src="images/budget.webp" alt="Budget Image">
+                <img src="images/budget.webp" alt="Budget Image" width="358" height="284" loading="lazy">
             </div>
         </section>
 
@@ -212,7 +229,7 @@
         <p>Last Modified: <span id="lastModified"></span></p>
     </footer>
 
-    <script src="https://kit.fontawesome.com/f2502bf9ce.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/f2502bf9ce.js" crossorigin="anonymous" defer></script>
     <script src="scripts/index.js" defer></script>
 </body>
 </html>

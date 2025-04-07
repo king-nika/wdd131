@@ -87,6 +87,31 @@ main {
   margin: 0 auto;
   padding: 1rem;
 }
+main .controls {
+  display: flex;
+  justify-content: right;
+  gap: 1rem;
+  align-items: center;
+}
+main .controls button {
+  background-color: var(--danger);
+  color: var(--text);
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.05rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+main .controls a {
+  background-color: var(--primary-accent);
+  color: var(--text);
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.05rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  text-decoration: none;
+}
 main h1 {
   font-size: 2rem;
   text-align: center;

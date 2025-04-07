@@ -36,7 +36,7 @@ if (!localStorage.getItem("transactions")) {
   localStorage.setItem("transactions", JSON.stringify([]));
 }
 
-const allTransactions = JSON.parse(localStorage.getItem("transactions"));
+let allTransactions = JSON.parse(localStorage.getItem("transactions"));
 const transactionTable = document.getElementById("transactions");
 
 const transactions = allTransactions.filter(
@@ -82,3 +82,18 @@ if (netBalance < 0) {
 } else {
   document.getElementById("netBalance").style.color = "#66bb6a";
 }
+
+const clearBtn = document.getElementById("clearAll");
+clearBtn.addEventListener("click", () => {
+  const confirm = window.confirm(
+    "Are you sure you want to clear all transactions?"
+  );
+
+  if (confirm) {
+    allTransactions = allTransactions.filter(
+      (transaction) => transaction.user !== currentUser
+    );
+    localStorage.setItem("transactions", JSON.stringify(allTransactions));
+    window.location.reload();
+  }
+});
