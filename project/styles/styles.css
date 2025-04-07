@@ -189,7 +189,7 @@ main > h1 {
   font-size: 1.2rem;
 }
 .start p.error {
-  color: var(--danger);
+  color: var(--alert);
   margin: 1rem 0;
   font-weight: 500;
 }
