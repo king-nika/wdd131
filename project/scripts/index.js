@@ -41,6 +41,14 @@ form.addEventListener("submit", (e) => {
   };
 
   const users = JSON.parse(localStorage.getItem("users"));
+  const existingUser = users.find((user) => user.email === email);
+
+  if (existingUser) {
+    document.querySelector(".error").textContent =
+      "User already exists. Please use a different email.";
+    return;
+  }
+
   users.push(user);
   localStorage.setItem("users", JSON.stringify(users));
   localStorage.setItem("currentUser", email);

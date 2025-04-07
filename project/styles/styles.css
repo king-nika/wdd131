@@ -142,13 +142,13 @@ main > h1 {
   gap: 1rem;
 }
 .features > div {
-  padding: 1rem;
+  padding: 1rem 0.5rem;
   border: 1.5px solid var(--neutral);
   border-radius: 8px;
   transition: box-shadow 0.2s ease, transform 0.2s ease;
   cursor: pointer;
   display: flex;
-  height: fit-content;
+  /* height: fit-content; */
 }
 .features > div > div:first-child {
   display: flex;
@@ -157,9 +157,7 @@ main > h1 {
 }
 .features div svg {
   fill: var(--primary-accent);
-  height: 100%;
-  width: auto;
-  float: left;
+  margin-right: 1rem;
 }
 .features > div:hover {
   box-shadow: 0 0 10px var(--neutral);
@@ -189,6 +187,11 @@ main > h1 {
 .start p {
   text-align: center;
   font-size: 1.2rem;
+}
+.start p.error {
+  color: var(--danger);
+  margin: 1rem 0;
+  font-weight: 500;
 }
 .start form {
   display: flex;
